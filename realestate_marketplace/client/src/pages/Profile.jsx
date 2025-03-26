@@ -149,7 +149,7 @@ export default function Profile() {
       setDeleteListingsError(true);
       return
     }
-  }
+  };
 
   return (
     <div className='p-3 max-w-lg mx-auto'>
