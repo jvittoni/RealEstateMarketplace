@@ -146,7 +146,7 @@ export default function UpdateListing() {
             setError(error.message);
             setLoading(false);
         }
-    }
+    } 
 
   return (
     <main className='p-3 max-w-4xl mx-auto'>
