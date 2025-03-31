@@ -36,7 +36,7 @@ export default function Header() {
                 </Link>
                 <form onSubmit={handleSubmit} className='bg-slate-100 p-3 rounded-lg flex items-center'>
                     <input 
-                        onChange={(e) => setSearchTerm(e.target.value)}
+                        onChange={(e) => setSearchTerm(e. target.value)}
                         value={searchTerm}  
                         type="text" 
                         placeholder='Search...' 
