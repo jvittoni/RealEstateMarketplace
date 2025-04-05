@@ -160,10 +160,12 @@ export default function Profile() {
     }
   };
 
+
+
   return (
-    <div className=' flex flex-col md:flex-row'>
-      <div className='p-7 border-b-2 md:border-r-2 md:min-h-screen sm:min-h-170 min-h-170 flex flex-col justify-between'>
-        <div className='p-3 xl:w-[420px]'>
+    <div className='flex flex-col md:flex-row'>
+      <div className='p-3 border-b-2 md:border-r-2 md:min-h-screen sm:min-h-170 min-h-170 flex flex-col justify-between'>
+        <div className='p-3 mt-7 xl:w-[420px]'>
           <h1 className='text-3xl font-semibold text-center my-7'>Profile</h1>
           <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
             <input onChange={(e) => setFile(e.target.files[0])} type="file" ref={fileRef} hidden accept='image/*' />
@@ -189,13 +191,13 @@ export default function Profile() {
               {loading ? 'Loading...' : 'Update'}
             </button>
           </form>
-        </div>
-        <div className='flex justify-between p-3'>
-          <div className=''>
-            <span onClick={handleDeleteUser} className='text-red-600 cursor-pointer'>Delete Account</span>
-          </div>
-          <div className=''>
-            <span onClick={handleSignOut} className='text-white cursor-pointer rounded-lg bg-slate-700 p-3 hover:opacity-95 '>Sign Out</span>
+          <div className='flex justify-between p-3 mt-30'>
+            <div className=''>
+              <span onClick={handleDeleteUser} className='text-red-600 cursor-pointer'>Delete Account</span>
+            </div>
+            <div className=''>
+              <span onClick={handleSignOut} className='text-white cursor-pointer rounded-lg bg-slate-700 p-3 hover:opacity-95 '>Sign Out</span>
+            </div>
           </div>
         </div>
       </div>
