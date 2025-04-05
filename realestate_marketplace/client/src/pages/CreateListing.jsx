@@ -45,7 +45,7 @@ export default function CreateListing() {
                 setUploading(false);
             });
         } else {
-            setImageUploadError('You can only upload 6 images per listing');
+            setImageUploadError('You can only upload 6 images per listing!');
             setUploading(false);
         }
     };
@@ -105,8 +105,8 @@ export default function CreateListing() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            if (formData.imageUrls.length < 1) return setError('You must upload at least one image');
-            if (+formData.regularPrice < +formData.discountPrice) return setError('Discount price must be lower than regular price');
+            if (formData.imageUrls.length < 1) return setError('You must upload at least one image!');
+            if (+formData.regularPrice < +formData.discountPrice) return setError('Discounted price must be lower than regular price!');
             setLoading(true);
             setError(false);
             const res = await fetch(`/api/listing/create`, {
