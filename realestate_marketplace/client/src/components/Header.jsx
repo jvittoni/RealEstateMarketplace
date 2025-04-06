@@ -35,34 +35,33 @@ export default function Header() {
                         <span className='text-white text-2xl xl:text-4xl lg:text-3xl md:text-3xl sm:text-2xl'>Estate</span>
                     </h1>
                 </Link>
-                <form onSubmit={handleSubmit} className='bg-zinc-100 p-3 rounded-lg flex items-center'>
+                <form onSubmit={handleSubmit} className='bg-zinc-100 p-3 rounded-lg items-center  md:hidden lg:flex'>
                     <input
                         onChange={(e) => setSearchTerm(e.target.value)}
                         value={searchTerm}
                         type="text"
                         placeholder='Search...'
-                        className='bg-transparent focus:outline-no2xlne w-35 sm:w-32 md:w-55 lg:w-72 xl:w-84 text-xl'
+                        className='bg-transparent focus:outline-no2xlne w-35 sm:w-55 md:w-55 lg:w-72 xl:w-84 text-xl'
                     />
                     <button>
                         <FaSearch size={20} className='text-zinc-600 cursor-pointer hover:text-zinc-700' />
                     </button>
-
                 </form>
-                <ul className='flex gap-4 items-center xl:gap-10 lg:gap-10'>
+                <ul className='flex gap-4 items-center lg:gap-10 md:gap-7'>
                     <Link to='/'>
-                        <li className='hidden sm:inline text-white hover:text-zinc-200 cursor-pointer text-xl lg:text-[22px]'>Home</li>
+                        <li className='hidden md:inline text-white hover:text-zinc-200 cursor-pointer text-xl md:text-[22px]'>Home</li>
                     </Link>
                     <Link to='/about'>
-                        <li className='hidden sm:inline text-white hover:text-zinc-200 cursor-pointer text-xl lg:text-[22px]'>About</li>
+                        <li className='hidden md:inline text-white hover:text-zinc-200 cursor-pointer text-xl md:text-[22px]'>About</li>
                     </Link>
                     <Link to='/search'>
-                        <li className='hidden sm:inline text-white hover:text-zinc-200 cursor-pointer text-xl lg:text-[22px]'>Listings</li>
+                        <li className='hidden md:inline text-white hover:text-zinc-200 cursor-pointer text-xl md:text-[22px]'>Listings</li>
                     </Link>
                     <Link to='/profile'>
                         {currentUser ? (
                             <img className='rounded-full h-10 w-10 xl:h-12 xl:w-12 object-cover' src={currentUser.avatar} alt="profile" />
                         ) : (
-                            <li className='text-zinc-950 hover:text-zinc-600 cursor-pointer text-xl'>Sign In</li>
+                            <li className='text-white hover:text-zinc-200 cursor-pointer text-xl md:text-[22px]'>Sign In</li>
                         )}
                     </Link>
                 </ul>
