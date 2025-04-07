@@ -174,7 +174,7 @@ export default function Search() {
                         </div>
                     </div>
                     <div className='flex flex-row gap-2'>
-                        <label className='font-semibold'>Ammenities:</label>
+                        <label className='font-semibold'>Amenities:</label>
                         <div className='flex flex-row flex-wrap md:flex-col md:flex-nowrap gap-2 items-center md:items-start'>
                             <div className='flex gap-2'>
                                 <input
